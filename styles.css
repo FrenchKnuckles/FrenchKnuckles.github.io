@@ -62,7 +62,7 @@ body{
     color: var(--text-color);
     padding: 20px;
     display: flex;
-    margin: 0 10;
+    margin: 0 10px;
     justify-content: space-evenly;
     border-radius: 1%;
     align-items: center;
@@ -270,7 +270,8 @@ body{
 
 .Aboutm #analyzer{
     display: block;
-    width: 290%;
+    width: 100%;
+    max-width: 800px;
     height: 400px;
     padding: 20px;
     margin-top: 15px;
