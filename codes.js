@@ -70,3 +70,50 @@ document.addEventListener("DOMContentLoaded", () => {
         if (el) observer.observe(el);
     });
 });
+
+function analyzeText() {
+    const text = document.getElementById('analyzer').value;
+
+    const letterCount = (text.match(/[a-zA-Z]/g) || []).length;
+    const wordCount = (text.match(/\b\w+\b/g) || []).length;
+    const spaceCount = (text.match(/ /g) || []).length;
+    const newlineCount = (text.match(/\n/g) || []).length;
+    const specialCharCount = (text.match(/[^a-zA-Z0-9\s]/g) || []).length;
+
+    const words = text.toLowerCase().match(/\b\w+\b/g) || [];
+
+    const pronouns = ["i", "you", "he", "she", "it", "we", "they", "me", "him", "her", "us", "them", "my", "your", "his", "its", "our", "their", "mine", "yours", "hers", "ours", "theirs"];
+    const prepositions = ["in", "on", "at", "by", "for", "with", "about", "against", "between", "into", "through", "during", "before", "after", "above", "below", "to", "from", "up", "down", "over", "under"];
+    const articles = ["a", "an"];
+
+    const countOccurrences = (wordList) => {
+        return wordList.reduce((acc, word) => {
+            if (acc[word]) acc[word]++;
+            else acc[word] = 1;
+            return acc;
+        }, {});
+    };
+
+    const filterAndCount = (set) => {
+        return countOccurrences(words.filter(w => set.includes(w)));
+    };
+
+    const pronounCounts = filterAndCount(pronouns);
+    const prepositionCounts = filterAndCount(prepositions);
+    const articleCounts = filterAndCount(articles);
+
+    document.getElementById('results').innerHTML = `
+        <p><strong>Letters:</strong> ${letterCount}</p>
+        <p><strong>Words:</strong> ${wordCount}</p>
+        <p><strong>Spaces:</strong> ${spaceCount}</p>
+        <p><strong>Newlines:</strong> ${newlineCount}</p>
+        <p><strong>Special Symbols:</strong> ${specialCharCount}</p>
+        <hr>
+        <h3>Pronouns:</h3>
+        <pre>${JSON.stringify(pronounCounts, null, 2)}</pre>
+        <h3>Prepositions:</h3>
+        <pre>${JSON.stringify(prepositionCounts, null, 2)}</pre>
+        <h3>Indefinite Articles:</h3>
+        <pre>${JSON.stringify(articleCounts, null, 2)}</pre>
+    `;
+}

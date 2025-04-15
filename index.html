@@ -120,8 +120,11 @@
         </div>
         <div class="aboutm-wrapper">
             <div class="Aboutm">
-                <p>The following is a text analyzer.</p>
-                <textarea id="analyzer" placeholder="Write down something"></textarea>
+                <label for="analyzer" style="margin-left: 40px; font-size: 1.1em;">Enter text below:</label>
+                <textarea id="analyzer" rows="20"></textarea>
+                <br>
+                <button onclick="analyzeText()" style="margin: 20px 40px; padding: 10px 20px; font-size: 1.2em;">Analyze</button>
+                <div id="results" style="margin-left: 40px; font-size: 1.1em;"></div>
             </div>
         </div>
     </section>

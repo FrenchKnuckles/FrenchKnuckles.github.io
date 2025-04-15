@@ -121,7 +121,7 @@ body{
 }
 
 .button .white {
-    background-color: (--back-color);
+    background-color: var(--back-color);
 }
 
 .padder{
