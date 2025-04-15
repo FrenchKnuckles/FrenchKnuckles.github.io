@@ -283,3 +283,96 @@ body{
     line-height: 1.5;
     resize: vertical;
 }
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 90%;
+    }
+
+    .Intro {
+        font-size: 50px;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        height: auto;
+    }
+
+    .Intro .small_font {
+        font-size: 30px;
+    }
+
+    .trop {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .aboutm-wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .aboutm-photo,
+    .photo1,
+    .photo2 {
+        margin-left: 0;
+        width: 80%;
+        height: auto;
+    }
+
+    .Aboutm {
+        max-width: 90%;
+        font-size: 120%;
+        text-align: justify;
+    }
+
+    .Aboutm .font_inc {
+        font-size: 200%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .Skillset-wrapper {
+        flex-direction: column;
+        max-width: 90%;
+        font-size: 130%;
+        margin: 0 auto;
+        gap: 10px;
+    }
+
+    .Skillset-wrapper ul li,
+    .Skillset-wrapper ol li {
+        margin-left: 20px;
+        font-size: 100%;
+        padding: 10px;
+    }
+
+    .Skillset-top {
+        font-size: 200%;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .cv-link {
+        margin-left: 20px;
+    }
+
+    .Aboutm #analyzer {
+        width: 95%;
+        margin-left: 0;
+        font-size: 1rem;
+        height: 300px;
+    }
+
+    .divur {
+        width: 95%;
+        margin-top: 80px;
+    }
+
+    .button {
+        height: 25px;
+        width: 25px;
+    }
+}
