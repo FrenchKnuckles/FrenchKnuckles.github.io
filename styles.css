@@ -284,96 +284,142 @@ body{
     line-height: 1.5;
     resize: vertical;
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 1024px) {
     html {
         font-size: 90%;
     }
-
+    
     .Intro {
-        font-size: 50px;
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-        height: auto;
+        font-size: 80px;
     }
-
+    
     .Intro .small_font {
-        font-size: 30px;
+        font-size: 48px;
     }
+    
+    .aboutm-wrapper {
+        margin-left: 50px;
+    }
+    
+    .aboutm-photo {
+        margin-left: 50px;
+    }
+    
+    .Skillset-top {
+        margin-right: 100px;
+    }
+}
 
+/* For mobile phones */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 80%;
+    }
+    
     .trop {
         flex-direction: column;
         padding: 10px;
+        height: auto;
     }
-
+    
+    .items {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .button {
+        margin-top: 10px;
+    }
+    
+    .padder {
+        padding-top: 200px;
+    }
+    
+    .Intro {
+        font-size: 50px;
+        height: 70vh;
+    }
+    
+    .Intro .small_font {
+        font-size: 30px;
+    }
+    
     .aboutm-wrapper {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         margin-left: 0;
         padding: 20px;
-        gap: 10px;
     }
-
-    .aboutm-photo,
-    .photo1,
-    .photo2 {
-        margin-left: 0;
-        width: 80%;
-        height: auto;
-    }
-
+    
     .Aboutm {
         max-width: 90%;
         font-size: 120%;
-        text-align: justify;
     }
-
+    
     .Aboutm .font_inc {
-        font-size: 200%;
-        margin-left: 0;
+        margin-left: 20px;
         text-align: center;
     }
-
-    .Skillset-wrapper {
-        flex-direction: column;
-        max-width: 90%;
-        font-size: 130%;
-        margin: 0 auto;
-        gap: 10px;
+    
+    .aboutm-photo {
+        margin-left: 0;
+        margin-top: 20px;
     }
-
-    .Skillset-wrapper ul li,
-    .Skillset-wrapper ol li {
+    
+    .photo1, .photo2 {
+        width: 90%;
+        margin: 20px auto;
+        display: block;
+    }
+    
+    .Skillset-wrapper {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .Skillset-wrapper ul li {
         margin-left: 20px;
-        font-size: 100%;
+    }
+    
+    .Skillset-wrapper ol li {
+        margin-left: 40px;
         padding: 10px;
     }
-
+    
     .Skillset-top {
-        font-size: 200%;
+        font-size: 300%;
         text-align: center;
         margin-right: 0;
     }
-
-    .cv-link {
-        margin-left: 20px;
-    }
-
+    
     .Aboutm #analyzer {
-        width: 95%;
-        margin-left: 0;
-        font-size: 1rem;
-        height: 300px;
+        width: 90%;
+        margin-left: 5%;
     }
+}
 
-    .divur {
-        width: 95%;
-        margin-top: 80px;
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .trop {
+        padding: 5px;
     }
-
-    .button {
-        height: 25px;
-        width: 25px;
+    
+    .padder {
+        padding-top: 250px;
+    }
+    
+    .Intro {
+        font-size: 40px;
+    }
+    
+    .Intro .small_font {
+        font-size: 24px;
+    }
+    
+    .Skillset-wrapper ol li {
+        margin-left: 30px;
+        padding: 5px;
     }
 }
