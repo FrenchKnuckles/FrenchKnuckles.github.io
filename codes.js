@@ -28,7 +28,7 @@ btn.addEventListener("click",function(event){
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log(`${new Date().toISOString()} , view , document`);
+    console.log(`[MyTracker] ${new Date().toISOString()} , view , document`);
 
     function getElementType(target) {
         if (target.tagName === "IMG") return "image";
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const target = event.target;
         const timestamp = new Date().toISOString();
         const elementType = getElementType(target);
-        console.log(`${timestamp} , click , ${elementType}`);
+        console.log(`[MyTracker] ${timestamp} , click , ${elementType}`);
     });
 
     const seenSections = new Set();
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const id = entry.target.id || entry.target.className || "unknown";
                 if (!seenSections.has(id)) {
                     seenSections.add(id);
-                    console.log(`${new Date().toISOString()} , view , ${id}`);
+                    console.log(`[MyTracker] ${new Date().toISOString()} , view , ${id}`);
                 }
             }
         });
