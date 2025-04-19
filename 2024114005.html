@@ -4,20 +4,11 @@
 </head>
 <body>
     <a-scene>
-        <!-- Ground plane -->
-        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane> <!--same x and z coords make it centered-->
-        
-        <!-- Box at the bottom (centered on plane) -->
-        <a-box position="0 0.5 -4" rotation="0 45 0" width="1" height="1" depth="1" color="#4CC3D9"></a-box> <!-- height of each object is set to one so each following object is +1 in y coord-->
-        
-        <!-- Cylinder in the middle -->
-        <a-cylinder position="0 1.5 -4" radius="0.5" height="1" color="#FFC65D"></a-cylinder>
-        
-        <!-- Sphere on top -->
-        <a-sphere position="0 2.75 -4" radius="0.5" color="#EF2D5E"></a-sphere>
-        
-        <!-- Sky -->
-        <a-sky color="#ECECEC"></a-sky>
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>   
+    <a-box position="0 0.5 -4" rotation="0 45 0" height="1" color="#4CC3D9"></a-box> <!-- To make it centered only need to make the x and z coord the same -->
+    <a-sphere position="0 1.5 -4" radius="0.5" color="#EF2D5E"></a-sphere> <!-- each following object has y coord with increment of 1 as each one gets the same height of 1 -->
+    <a-cylinder position="0 2.5 -4" radius="0.5" height="1" color="#FFC65D"></a-cylinder> 
+    <a-sky color="#ECECEC"></a-sky>
     </a-scene>
-</body>
+    </body>
 </html>
