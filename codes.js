@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
         threshold: 0.5
     });
 
-    const sectionsToTrack = ['aboutm', 'Skillset', 'intro'];
+    const sectionsToTrack = ['aboutm', 'Skillset', 'intro','cv'];
     sectionsToTrack.forEach(id => {
         const el = document.getElementById(id);
         if (el) observer.observe(el);
